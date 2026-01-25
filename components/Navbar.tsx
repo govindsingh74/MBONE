@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Menu, X, Bone } from 'lucide-react';
+import Image from 'next/image';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,7 +22,12 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <Bone className="h-8 w-8 text-brand-accent" />
+            <Image
+              src="/logo.png"
+              alt="MillionBone"
+              width={40}
+              height={40}
+            />
             <span className="text-xl font-bold text-brand-primary tracking-wide">
               MILLIONBONE
             </span>

@@ -1,9 +1,9 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { Alumni_Sans_SC } from 'next/font/google';
+import { Alumni_Sans } from 'next/font/google';
 import SEO from '@/components/SEO';
 
-const alumniSans = Alumni_Sans_SC({ 
+const alumniSans = Alumni_Sans({ 
   subsets: ['latin'],
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
   variable: '--font-alumni-sans'

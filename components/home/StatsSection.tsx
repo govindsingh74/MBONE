@@ -1,24 +1,20 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { TrendingUp, Users, Flame } from 'lucide-react';
 
 export default function StatsSection() {
   const stats = [
     {
-      icon: TrendingUp,
       title: 'Total Supply',
       value: '1,000,000,000',
       subtitle: '$MBONE Tokens'
     },
     {
-      icon: Users,
       title: 'Community Driven',
       value: '100%',
       subtitle: 'No Team Allocation'
     },
     {
-      icon: Flame,
       title: 'Auto Burn',
       value: '2%',
       subtitle: 'Every Transaction'
@@ -52,12 +48,8 @@ export default function StatsSection() {
               transition={{ duration: 0.6, delay: index * 0.2 }}
               viewport={{ once: true }}
               className="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-8 text-center hover-lift shadow-lg border"
-            >
-              <div className="bg-brand-accent/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                <stat.icon className="h-8 w-8 text-brand-accent" />
-              </div>
-              
-              <h3 className="text-brand-primary font-bold text-lg mb-2">
+            >               
+              <h3 className="text-brand-primary font-bold text-3xl mb-2">
                 {stat.title}
               </h3>
               
