@@ -38,14 +38,8 @@ export default function Footer() {
               <Link href="/" className="block text-gray-300 hover:text-brand-accent transition-colors">
                 Home
               </Link>
-              <Link href="/about" className="block text-gray-300 hover:text-brand-accent transition-colors">
-                About
-              </Link>
-              <Link href="/tokenomics" className="block text-gray-300 hover:text-brand-accent transition-colors">
-                Tokenomics
-              </Link>
-              <Link href="/contact" className="block text-gray-300 hover:text-brand-accent transition-colors">
-                Contact
+              <Link href="/shop" className="block text-gray-300 hover:text-brand-accent transition-colors">
+                Shop
               </Link>
             </div>
           </div>
@@ -81,4 +75,4 @@ export default function Footer() {
       </div>
     </footer>
   );
-}
+} 

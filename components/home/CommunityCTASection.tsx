@@ -98,7 +98,7 @@
                 className="bg-brand-accent text-white px-8 py-4 rounded-full text-xl font-bold flex items-center space-x-2 hover:bg-opacity-90 transition-all shadow-lg mx-auto"
               >
                 <span>START YOUR JOURNEY</span>
-                <ArrowRight {...({ className: 'h-5 w-5' } as any)} />
+                <ArrowRight className="h-5 w-5" />
               </motion.button>
               
               <p className="text-brand-primary mt-4">

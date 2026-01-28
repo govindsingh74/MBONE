@@ -1,25 +1,21 @@
-'use client'
+'use client';
 
-import { WagmiProvider } from 'wagmi'
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-import { config } from '@/lib/wallet'
-import { ReactNode, useEffect, useState } from 'react'
+import { ReactNode } from 'react';
+import { RainbowKitProvider } from '@rainbow-me/rainbowkit';
+import { WagmiProvider } from 'wagmi';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { config } from '@/lib/rainbowkit';
 
-export default function Providers({ children }: { children: ReactNode }) {
-  const [mounted, setMounted] = useState(false)
-  const [queryClient] = useState(() => new QueryClient())
+const queryClient = new QueryClient();
 
-  useEffect(() => {
-    setMounted(true)
-  }, [])
-
-  if (!mounted) return null
-
+export default function WalletProvider({ children }: { children: ReactNode }) {
   return (
     <WagmiProvider config={config}>
       <QueryClientProvider client={queryClient}>
-        {children}
+        <RainbowKitProvider>
+          {children}
+        </RainbowKitProvider>
       </QueryClientProvider>
     </WagmiProvider>
-  )
+  );
 }
